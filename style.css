@@ -1,24 +1,27 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     background: rgb(21,251,191);
     background-image: radial-gradient(circle, rgba(21,251,191,1) 0%, rgba(247,185,255,1) 25%, rgba(136,131,242,1) 81%);
+    width: 100vw;
+    height: 100vh;
 }
 
 #task{
-    resize: none;
+    border-radius: 5em;
+    width: 25em;
+    height: 2.5em;
+    padding: 1.5em;
+    margin: 1.5em;
+    font-size: 1em;
 }
 
 #push{
-    height: 30px;
-    width: 60px;
+    height: 4.5em;
+    width: 6em;
     float: center;
     position: relative;
     cursor: pointer;
+    border-radius: 1.5em;
 }
 
 .container{
@@ -27,7 +30,7 @@ body {
     height: 300px;
     width: 400px;
     position: relative;
-    border: 3px solid green;
+    background-color: rgba(255, 255, 255, 0.63);
     min-height: 150px;
     min-width: 500px;
     position: absolute;
