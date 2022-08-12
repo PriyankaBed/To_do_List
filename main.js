@@ -19,68 +19,69 @@ const createToDoElement = () => {
     title.value = inputField.value;
     title.disabled = true;
 
+    const inputVal = title.value;
+
     const deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
     deleteBtn.className = "button";
-    deleteBtn.innerText = "Delete";
+    // deleteBtn.innerText = "Delete";
 
     const editButtonDiv = document.createElement("div");
     editButtonDiv.className = "editButton";
 
     const editBtn = document.createElement("button");
-    editBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-    editBtn.innerText = "Edit";
+    editBtn.innerHTML = "<i class='fas fa-edit'></i>";
+    // editBtn.innerText = "Edit";
     editBtn.className = "button";
 
-    const saveBtn = document.createElement("button");
-    saveBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-    saveBtn.innerText = "Save";
-    saveBtn.className = "button";
+    // const saveBtn = document.createElement("button");
+    // saveBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
+    // saveBtn.innerText = "Save";
+    // saveBtn.className = "button";
 
     const checkButtonDiv = document.createElement("div");
     checkButtonDiv.className = "checkButton";
 
     const checkBtn = document.createElement("button");
-    checkBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-    checkBtn.innerText = "Check";
+    checkBtn.innerHTML = "<i class='fas fa-check'></i>";
+    // checkBtn.innerText = "Check";
     checkBtn.className = "button";
 
-    const UncheckButtonDiv = document.createElement("div");
-    checkButtonDiv.className = "UncheckButton";
-
-    const UncheckBtn = document.createElement("button");
-    UncheckBtn.innerHTML = "<i class='fas fa-trash-alt'></i>";
-    UncheckBtn.innerText = "UnCheck";
-    UncheckBtn.className = "button";
-
     checkBtn.addEventListener("click", (e) => {
-        title.style.textDecoration = "line-through";
-        title.innerText = "Check";
-        title.innerText = inputField.value;
+        if (title.style.textDecoration === "line-through"){
+            title.style.textDecoration = "none";
+        } else {
+            title.style.textDecoration = "line-through";
+        }
+  
     });
-
-    UncheckBtn.addEventListener("click", () => {
-        title.style.textDecoration = "";
-        title.innerText = "UnCheck";
-        title.innerText = inputField.value = "";
-    });
-
-    title.innerText = "UnCheck";
-    title.innerText = inputField.value = "";
 
     deleteBtn.addEventListener("click", (e) => {
         toDoElement.remove();
     });
 
     editBtn.addEventListener("click", (e) => {
-        title.disabled = false;
+        title.disabled ? title.disabled = false : title.disabled = true;
+        // title.disabled = false;
     });
 
-    saveBtn.addEventListener("click", (e) => {
-        title.disabled = true;
-    });
+    // saveBtn.addEventListener("click", (e) => {
+    //     title.disabled = true;
+    // });
 
-    toDoElement.append(title, checkBtn, UncheckBtn, deleteBtn, editBtn, saveBtn);
-
+    toDoElement.append(title, checkBtn, deleteBtn, editBtn, /*saveBtn*/);
     postsContainer.append(toDoElement);
+    
+    inputVal.addEventListener('dblclick', function(){
+        if (title.style.textDecoration === "line-through"){
+            title.style.textDecoration = "none";
+        } else {
+            title.style.textDecoration = "line-through";
+        }
+    })
+
+    
+   
 };
+
+
