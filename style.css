@@ -6,15 +6,6 @@ body {
 }
 
 #task {
-
-body {
-    background: rgb(21,251,191);
-    background-image: radial-gradient(circle, rgba(21,251,191,1) 0%, rgba(247,185,255,1) 25%, rgba(136,131,242,1) 81%);
-    width: 100vw;
-    height: 100vh;
-}
-
-#task{
     border-radius: 5em;
     width: 25em;
     height: 2.5em;
@@ -24,7 +15,6 @@ body {
 }
 
 #push {
-#push{
     height: 4.5em;
     width: 6em;
     float: center;
@@ -33,7 +23,7 @@ body {
     border-radius: 1.5em;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     height: 300px;
@@ -50,7 +40,7 @@ body {
     border-radius: 8em;
 }
 
-.contentarea{
+.contentarea {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,9 +80,4 @@ h2 {
     height: 18px;
     color: rgb(3, 3, 3);
     cursor: pointer;
-}
-
-.inline{
-    display: flex;
-    align-items: center;
 }
