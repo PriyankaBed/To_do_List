@@ -13,7 +13,7 @@ addButton.addEventListener("click", (e) => {
 
 const createToDoElement = () => {
     const toDoElement = document.createElement("div");
-    toDoElement.className = "toDoElement";
+    // toDoElement.className = "toDoElement";
 
     const title = document.createElement("input");
     title.value = inputField.value;
@@ -72,7 +72,7 @@ const createToDoElement = () => {
     toDoElement.append(title, checkBtn, deleteBtn, editBtn, /*saveBtn*/);
     postsContainer.append(toDoElement);
     
-    inputVal.addEventListener('dblclick', function(){
+    title.addEventListener('dblclick', function(){
         if (title.style.textDecoration === "line-through"){
             title.style.textDecoration = "none";
         } else {
