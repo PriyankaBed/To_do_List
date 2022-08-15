@@ -72,13 +72,7 @@ const createToDoElement = () => {
     toDoElement.append(title, checkBtn, deleteBtn, editBtn, /*saveBtn*/);
     postsContainer.append(toDoElement);
     
-    title.addEventListener('dblclick', function(){
-        if (title.style.textDecoration === "line-through"){
-            title.style.textDecoration = "none";
-        } else {
-            title.style.textDecoration = "line-through";
-        }
-    })
+
 
     
    
